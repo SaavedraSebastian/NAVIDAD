@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Navidad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="santa-container">
+    <img src="trineo.png" alt="Santa en trineo" class="santa">
+    <div class="reindeer-group">
+      <img src="reno-de-navidad.png" alt="Reno 1" class="reindeer">
+      <img src="reno-de-navidad.png" alt="Reno 2" class="reindeer">
+      <img src="reno-de-navidad.png" alt="Reno 3" class="reindeer">
+    </div>
+
+  </div>
+ 
+  <div class="firework" id="firework"></div>
+    <div class="firework" id="firework"></div>
+    <div class="firework" id="firework"></div>
+    <div class="firework" id="firework"></div>
+    <div class="firework" id="firework"></div>
+    <div class="firework" id="firework"></div>
+  
+  <div class="container" >
+    <h1 id="titulo">🎄 ¡Falta poco para Navidad! 🎅</h1>
+    <div id="countdown">
+      
+      <div class="time">
+        <span id="days">00</span>
+        <p>Días</p>
+      </div>
+      <div class="time">
+        <span id="hours">00</span>
+        <p>Horas</p>
+      </div>
+      <div class="time">
+        <span id="minutes">00</span>
+        <p>Minutos</p>
+      </div>
+      <div class="time">
+        <span id="seconds">00</span>
+        <p>Segundos</p>
+      </div>
+    </div>
+    <div class="mensaje-navidad" id="mensaje">
+      Feliz Navidad
+    </div>
+    <canvas id="fireworks"></canvas>
+    
+    <div class="radio-player">
+      <iframe style="border-radius:12px" 
+        src="https://www.oigo.com/moda/radioenvivo/" 
+        margin-top="30px"
+        width="400" height="300" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </div>
+    
+  </div>
+ 
+  
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@crashmax/fireworks"></script>
+</body>
+</html>
