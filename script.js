@@ -7,7 +7,7 @@ fireworksCanvas.height = window.innerHeight;
 let particles = [];
 let isFinalCountdown = false;
 
-const targetDate = new Date('2024-12-31T10:50:00'); 
+const targetDate = new Date('2024-12-31T22:50:00'); 
 
 function countdown() {
   const now = new Date();
