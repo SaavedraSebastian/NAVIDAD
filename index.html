@@ -3,31 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contador de Navidad</title>
+  <title>Contador de Año Nuevo</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="santa-container">
-    <img src="trineo.png" alt="Santa en trineo" class="santa">
-    <div class="reindeer-group">
-      <img src="reno-de-navidad.png" alt="Reno 1" class="reindeer">
-      <img src="reno-de-navidad.png" alt="Reno 2" class="reindeer">
-      <img src="reno-de-navidad.png" alt="Reno 3" class="reindeer">
+  <div class="container-fluid">
+    <div id="countdownElement">
+      <!-- Este div se llenará con contenido cuando llegue a cero -->
     </div>
-
-  </div>
- 
-  <div class="firework" id="firework"></div>
-    <div class="firework" id="firework"></div>
-    <div class="firework" id="firework"></div>
-    <div class="firework" id="firework"></div>
-    <div class="firework" id="firework"></div>
-    <div class="firework" id="firework"></div>
-  
-  <div class="container" >
-    <h1 id="titulo">🎄 ¡Falta poco para Navidad! 🎅</h1>
+    <h1 id="titulo">¡La cuenta regresiva para Año Nuevo ha comenzado! </h1>
     <div id="countdown">
-      
       <div class="time">
         <span id="days">00</span>
         <p>Días</p>
@@ -45,25 +31,20 @@
         <p>Segundos</p>
       </div>
     </div>
-    <div class="mensaje-navidad" id="mensaje">
-      Feliz Navidad
+    <div class="mensaje-anio-nuevo" id="mensaje">
+      ¡Feliz Año Nuevo 2025!
     </div>
+    <div id="year-container" class="year-display"></div>
+
     <canvas id="fireworks"></canvas>
-    
-    <div class="radio-player">
-      <iframe style="border-radius:12px" 
-        src="https://www.oigo.com/moda/radioenvivo/" 
-        margin-top="30px"
-        width="400" height="300" 
-        frameBorder="0" 
-        allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-      </iframe>
-    </div>
-    
+    <div class="radio-player"></div>
   </div>
- 
-  
+  <button id="showIframeButton" class="radio-button">Escuchar Radio</button>
+
+
+<iframe id="radioIframe" src="https://www.oigo.com/radiomar/radioenvivo/" 
+        style="border: none; width: 800px; height: 800px; opacity: 0; pointer-events: none; transition: opacity 0.5s ease;"></iframe>
+      
 
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@crashmax/fireworks"></script>
