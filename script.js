@@ -7,7 +7,7 @@ fireworksCanvas.height = window.innerHeight;
 let particles = [];
 let isFinalCountdown = false;
 
-const targetDate = new Date('2024-12-31T22:50:00'); 
+const targetDate = new Date('2025-01-01T00:00:00'); 
 
 function countdown() {
   const now = new Date();
@@ -62,10 +62,25 @@ function handleCelebration() {
 
 function startFireworks() {
   createSparks(); 
+  drawSparks(); // Inicia el bucle de animación
   setTimeout(() => {
     particles = []; 
     ctx.clearRect(0, 0, fireworksCanvas.width, fireworksCanvas.height);
   }, 15000);
+}
+
+function createSparks() {
+  for (let i = 0; i < 20; i++) { // Incrementa el número de partículas
+    particles.push({
+      x: Math.random() * fireworksCanvas.width,
+      y: Math.random() * fireworksCanvas.height,
+      radius: Math.random() * 5 + 2, // Partículas más grandes
+      color: `hsl(${Math.random() * 360}, 100%, 70%)`,
+      speedX: Math.random() * 6 - 3,
+      speedY: Math.random() * 6 - 3,
+    });
+  }
+  console.log("Particles:", particles); // Verifica el array de partículas
 }
 
 function drawSparks() {
@@ -86,9 +101,9 @@ function drawSparks() {
     }
   });
 
-  createSparks();
-  requestAnimationFrame(drawSparks);
+  requestAnimationFrame(drawSparks); // Mantén el bucle de animación
 }
+
 
 function createSparks() {
   for (let i = 0; i < 10; i++) {
